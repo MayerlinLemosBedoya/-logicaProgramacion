@@ -7,7 +7,6 @@ entrada.addEventListener("input", (evento)=>{
     numero=evento.target.value;
     console.log (numero);
 });
-
 calcular.addEventListener("click",()=>{
    let hijo=document.createElement("li")
    for(let i=2;i<=numero;i++){
