@@ -22,3 +22,11 @@ console.log(frutas.length)
 for (let i=0; i<frutas.length;i++){
     console.log(frutas[i])
 }
+function sumar(a,b){
+    let resultado= a+b
+    return resultado
+}
+
+let resultadoSuma= sumar (4,6)
+
+console.log(resultadoSuma)

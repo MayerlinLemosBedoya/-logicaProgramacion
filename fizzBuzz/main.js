@@ -1,25 +1,33 @@
 let calcular=document.getElementById("btn")
 let entrada=document.getElementById("entrada")
-let numero=1
+let salida=document.getElementById("salida");
+let numero=0;
 
 entrada.addEventListener("input", (evento)=>{
     numero=evento.target.value;
     console.log (numero)
 });
-    for (let i=1;i<=numero;i++){
-        if(i%3==0&& i%5 ==0){
-      console.log("fizzBuzz")
-        }else if(i%3==0){
-            console.log("fizz")
-        }else if(i%5){
-            console.log("buzz")
 
+calcular.addEventListener("click",()=>FizzBuzz(numero))
+
+function FizzBuzz(numero){
+    for (let i=1;i<=numero;i++){
+        let hijo= document.createElement("li")
+        if(i%3==0&& i%5 ==0){
+            hijo.innerHTML="FizzBuzz"
+        }else if(i%3==0){
+            hijo.innerHTML="Fizz"
+        }else if(i%5){
+          hijo.innerHTML="Buzz"
         }
         else{
-            console.log(i)
+            hijo.innerHTML=i
         }
+        salida.appendChild(hijo)
 
     }
+}
+        
 
 
 
